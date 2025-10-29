@@ -1,0 +1,254 @@
+:root{
+    --max-width: 1100px;
+    --gap: 1rem;
+    --brand: #111111;
+    --muted: #666666;
+    --acent: #0066cc;
+    --bg: #aa9d9d;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: #222;
+    line-height: 1.6;
+}
+/* Contenedor central que limita el ancho y centra el contenido */
+.container{
+    width: calc(100% - 2rem);
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+}
+/* header */
+.site-header{
+    background-color: white;
+    border-bottom: 1px solid;
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+    padding: 1rem 0;
+}
+
+.brand{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--brand);
+}
+
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: var(--muted);
+    padding: 0.5rem 0.75rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus{
+    color: var(--acent);
+}
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.team-grid img{
+    width: 100%;
+    display: block;
+}
+
+.hero{
+    background: linear-gradient(180deg, rgba(0,102,204,00.05));
+    padding: 2rem 0;
+}
+
+.hero-inner{
+    text-align: center;
+}
+.hero .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--brand);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-outline{
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--acent);
+    text-decoration: none;
+    color: var(--acent);
+    border-radius: 6px;
+}
+
+.features{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.feature{
+    flex: 1 1 220px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.cta{
+    margin-top: 1rem;
+    background: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.site-footer{
+    background: #111;
+    color: #fff;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.footer-inner{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td{
+    padding: 0.75rem;
+    border: 1px solid #eaeaea;
+    text-align: left;
+}
+
+caption{
+    caption-side: top;
+    padding: 0.5rem 0;
+    font-weight: 600;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gallery-grid figure{
+    margin: 0;
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery-grid img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery-grid figcaption{
+    padding: 0.5rem;
+}
+
+form{
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+label{
+    display: block;
+    margin-top: 0.75rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: 3px solid rgba(0, 102, 204, 0.12);
+}
+
+button[type="submit"], .btn{
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .header-inner{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav ul{
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    .gallery-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .feature{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .gallery-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px){
+    .gallery-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+

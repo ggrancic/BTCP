@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiSitio - Contactos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">MiSitio</a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="container contact-intro">
+            <h1>Contacto</h1>
+            <p>Completá el formulario. Las validaciones son nativas con html5 (sin javascrip)</p>
+        </section>
+
+        <section class="container contact-form">
+
+            <form action="#" method="post">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="80" placeholder="Tu nombre completo">
+
+
+                <label for="email"> Correo Electrónico</label>
+                <input type="email" name="email" id="email" required placeholder="ejemplo@dominio.com">
+
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{7,15}" placeholder="Solo números, 7 a 15 digitos">
+
+                <label for="service">Servicio de interés</label>
+                <select name="service" id="service" required>
+                    <option value="">--Elige un servicio</option>
+                    <option value="curso">Curso HTML5</option>
+                    <option value="taller">Taller respponsive</option>
+                    <option value="autoria">Auditoria</option>
+                </select>
+
+                <label for="date">Fecha preferida</label>
+                <input type="date" id="date" min="2025-01-01" max="2026-12-31">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="container address">
+            <h2>Dirección</h2>
+            <address>
+                MiSitio - Calle Falsa 123, Ciudad ejemplo <br>
+                <a href="#"> +54 9 0000 0000</a>
+            </address>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025 MiSitio. Todos los derechos reservados</p>
+            <nav aria-label="Enlaces de pie de página">
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="pages/contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    
+</body>
+</html>
