@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +8,58 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
+
 <body>
 
     <div class="contenedor">
-        <h1>Cotizador de seguros de autos</h1>
-        <form id="formularioCotizacion">
-            <label for="marca">Marca:</label>
-            <select id="marca" required>
-                <option value="">Seleccione</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Ford">Ford</option>
-                <option value="Chevrolet">Chevrolet</option>
-                <option value="Volkswagen">Volkswagen</option>
-            </select>
+        <div class="formulario">
+            <h1>Cotizador de seguros de autos</h1>
+            <form id="formularioCotizacion">
+                <label for="marca">Marca:</label>
+                <select id="marca" required>
+                    <option value="">Seleccione</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                </select>
 
-            <label for="modelo">Modelo:</label>
-            <input type="text" id="modelo" placeholder="Ej: Corolla" required>
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" placeholder="Ej: Corolla" required>
 
-            <label for="anio">Año del vehículo</label>
-            <select id="anio" required>
-                <option value="">Seleccione</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-            </select>
+                <label for="anio">Año del vehículo</label>
+                <select id="anio" required></select>
 
-            <label for="valor">Valor del vehículo (USD)</label>
-            <input type="number" id="valor" min="1000" required>
+                <label for="valor">Valor del vehículo (USD)</label>
+                <input type="number" id="valor" min="1000" required>
 
-            <label for="edad">Edad del conductor:</label>
-            <input type="number" id="edad" min="18" required>
+                <label for="edad">Edad del conductor:</label>
+                <input type="number" id="edad" min="18" required>
 
-            <label for="licencia">Años con licencia:</label>
-            <input type="number" id="licencia" min="2" required>
+                <label for="licencia">Años con licencia:</label>
+                <input type="number" id="licencia" min="2" required>
 
-            <label for="siniestros">Cantidad de siniestros en los ultimos años:</label>
-            <input type="number" id="siniestros" min="0" required>
+                <label for="siniestros">Cantidad de siniestros en los ultimos años:</label>
+                <input type="number" id="siniestros" min="0" required>
 
-            <label for="cobertura">Tipo de cobertura:</label>
-            <select id="cobertura" required>
-                <option value="basica">Básica</option>
-                <option value="intermedia">Intermedia</option>
-                <option value="premium">Premium</option>
-            </select>
+                <label for="cobertura">Tipo de cobertura:</label>
+                <select id="cobertura" required>
+                    <option value="basica">Básica</option>
+                    <option value="intermedia">Intermedia</option>
+                    <option value="premium">Premium</option>
+                </select>
 
-            <button type="submit">Calcular cotización</button>
+                <button type="submit">Calcular cotización</button>
 
-            <div class="resumen" id="resumen">
-                <h2>Resumen de la cotización</h2>
-                <div id="resultado" class="resultado">
-                    Complete el formulario para ver el resultado
+                <div class="resumen" id="resumen">
+                    <h2>Resumen de la cotización</h2>
+                    <div id="resultado" class="resultado">
+                        Complete el formulario para ver el resultado
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-    
-
-    
 </body>
+
 </html>
